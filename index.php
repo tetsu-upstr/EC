@@ -28,10 +28,10 @@ $database = new CreateDb("EC", "Product");
 <div class="container">
   <div class="row text-center py-5">
     <?php
-      component("Product1", "5000,000", "./img/item1.png");
-      component("Product2", "2500,000", "./img/item2.png");
-      component("Product3", "25000,000", "./img/item3.png");
-      component("Product4", "40000,000", "./img/item4.png");
+        $result = $database->getProduct();
+        while($row = mysqli_fetch_array($result)) {
+          component($row['product_name'], number_format($row['product_price']), $row['product_image']);
+        }
     ?>
   </div>
 </div>
