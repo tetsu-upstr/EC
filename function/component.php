@@ -1,6 +1,6 @@
 <?php
 
-function component($productName, $productPrice, $productImg) {
+function component($productName, $productPrice, $productImg, $productid) {
   $element = "
       <div class=\"col-md-3 col-sm-6 my-3 my-md-0\">
         <form action=\"index.php\" method=\"POST\">
@@ -25,6 +25,7 @@ function component($productName, $productPrice, $productImg) {
                   <span class=\"price\">¥$productPrice</span>
                 </h5>
                 <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"add\">カートに入れる<i class=\"fas fa-shopping-cart\"></i></button>
+                <input type=\"hidden\" name=\"product_id\" value=\"$productid\" >
               </div>
           </div>
         </form>
