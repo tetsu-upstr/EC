@@ -91,6 +91,7 @@ if(isset($_POST['remove'])) {
                 echo "<h6>Price(0 点)</h6>";
               }
 
+
               ?>
               <h6>配送料</h6>
               <hr>
