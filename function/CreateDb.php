@@ -24,6 +24,7 @@ class CreateDb
     $this->username = $username;
     $this->password = $password;
 
+    // データベース接続
     $this->con = mysqli_connect($servername, $username, $password);
 
     if(!$this->con) {

@@ -1,7 +1,8 @@
 <?php 
 session_start();
-require_once("./function/CreateDb.php"); 
-require_once("./function/component.php"); 
+
+require_once("function/CreateDb.php"); 
+require_once("function/Component.php"); 
 
 $database = new CreateDb("EC", "Product");
 
@@ -30,6 +31,7 @@ if(isset($_POST['add'])) {
       'product_id' => $_POST['product_id']
     );
 
+    // 新しいセッション変数の生成
     $_SESSION['cart'][0] = $item_array;
     // print_r($_SESSION['cart']);
   }
